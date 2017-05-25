@@ -1,0 +1,54 @@
+body{
+  background-color:#FFFFFF;
+  margin: 0;
+  font-family: 'Indie Flower', cursive;
+}
+
+ul, li{
+  
+}
+
+header{
+  background-color:#4682B4;
+  text-align: center;
+  color: white;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.telefone{
+  text-decoration:underline;
+}
+  header .profile-picture{
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+  }
+
+.links li{
+  display: inline;
+}
+
+section{
+    margin: 5px;
+}
+
+  section h1{
+    margin: 1px;
+  }
+
+  section .divs{
+    padding: 15px;
+    margin:25px;
+    padding-left: 15px;
+    margin-bottom: 20px;
+    background-color:#C0C0C0;
+    border-radius: 25px;
+  }
+
+footer{
+  background-color:#4682B4;
+  text-align: center;
+  padding: 15px;
+  color: white;
+}
