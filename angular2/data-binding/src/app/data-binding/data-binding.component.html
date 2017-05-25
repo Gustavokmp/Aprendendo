@@ -14,6 +14,7 @@
         <img [src]="urlImagem">
     </article>
     -->
+    <!--
     <article>
         <h3> Class e style Binding</h3>
         <div>
@@ -25,6 +26,11 @@
                 <option value="alert-danger">Erro</option>
             </select>
             <br><br>
+            <div class="alert {{ classe.value }}" role="alert">
+                Texto colorido conforme valor do combobox.
+            </div>
+
+
             <div class="alert" role="alert" [class.alert-success]="classe.value == 'alert-success'">
                 Sucesso</div>
             <div class="alert " role="alert" [class.alert-info]="classe.value == 'alert-info'">
@@ -33,6 +39,24 @@
                 Alerta</div>
             <div class="alert " role="alert" [class.alert-danger]="classe.value == 'alert-danger'">
                 Erro</div>
+            <div class="alert alert-danger" role="alert" [style.display]="classe.value == 'alert-danger' ? 'block' : 'none'">
+                Esse texto somente aparece em caso de erro</div>
+        </div>
+    </article>
+    -->
+    <article>
+        <h3>Event binding</h3>
+        <div>
+            <button (click)="botaoClicado()" class="btn btn-primary">Me clique!
+            </button>
+
+            <br><br>
+            <input type="text" (keyup)="onKeyUp($event)" (keyup.enter)="salvarValor(campoInput.value)" (blur)="salvarValor(campoInput.value)" #campoInput/>
+            <p> Valor atual: {{ valorAtual }}</p>
+            <p> Valor salvo: {{ valorSalvo }}</p>
+            <br>
+            <span (mauseover)="onMauseOverOut()" (mauseout)="onMauseOverOut()" [class.highlight]="isMauseOver"> Passe o mause sobre mim</span>
+
         </div>
     </article>
 </section>

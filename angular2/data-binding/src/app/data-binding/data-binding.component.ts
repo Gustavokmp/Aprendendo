@@ -13,6 +13,11 @@ export class DataBindingComponent implements OnInit {
   
   urlImagem = 'http://lorempixel.com/400/200/technics/';
 
+  valorAtual: string = '';
+  valorSalvo = '';
+  isMauseOver: boolean = false;
+
+
   getValor(){
     return 5;
   }
@@ -20,7 +25,25 @@ export class DataBindingComponent implements OnInit {
   getCurtirCurso(){
     return true;
   }
-  constructor() { }
+
+  botaoClicado(){
+    alert('Botão clicado!');
+  }
+  onKeyUp(evento: KeyboardEvent)
+{
+  this.valorAtual = (<HTMLInputElement>evento.target).value;
+}
+salvarValor(valor){
+  this.valorSalvo = valor;
+}
+onMauseOverOut(){
+  this.isMauseOver = !this.isMauseOver;
+
+}
+
+  constructor() { 
+
+  }
 
   ngOnInit() {
   }
